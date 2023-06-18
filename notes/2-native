@@ -1,0 +1,6 @@
+# Stage 2: Build the native image
+FROM quay.io/quarkus/ubi-quarkus-mandrel:22.3-java17 AS native-build
+COPY --chown=quarkus:quarkus --from=maven /home/app/target/native-sources /build
+USER quarkus
+WORKDIR /build
+RUN native-image $(cat native-image.args) -J-Xmx4g

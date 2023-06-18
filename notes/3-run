@@ -1,0 +1,7 @@
+# Stage 3: Create the docker final image
+FROM registry.access.redhat.com/ubi8/ubi-minimal:8.6
+WORKDIR /work/
+COPY --from=native-build /build/*-runner /work/application
+EXPOSE 8080
+ENTRYPOINT [ "/work/application" ]
+CMD ["./application", "-Dquarkus.http.host=0.0.0.0"]
