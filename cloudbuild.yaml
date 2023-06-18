@@ -16,3 +16,5 @@ steps:
       - 'europe-north1'
       - '--allow-unauthenticated'
 timeout: 1200s
+options:
+  machineType: N1_HIGHCPU_32
