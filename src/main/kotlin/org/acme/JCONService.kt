@@ -5,5 +5,5 @@ import jakarta.enterprise.context.ApplicationScoped
 @ApplicationScoped
 class JCONService {
 
-    fun hiJCON() = "JCON"
+    fun hiJCON() = "JCON ${System.currentTimeMillis()}"
 }
