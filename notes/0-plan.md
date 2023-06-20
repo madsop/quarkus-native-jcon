@@ -1,4 +1,4 @@
-# Plan for the session
+# Quarkus Native - from scratch to production
 
 1. download Quarkus starter
 2. run Quarkus dev
