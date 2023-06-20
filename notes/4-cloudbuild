@@ -3,9 +3,9 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'jcon'
+      - 'jconlive'
       - '--image'
-      - 'gcr.io/$PROJECT_ID/jcon:latest'
+      - 'gcr.io/$PROJECT_ID/jconlive:latest'
       - '--region'
       - 'europe-north1'
       - '--allow-unauthenticated'
