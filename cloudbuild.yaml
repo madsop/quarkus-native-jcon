@@ -1,0 +1,19 @@
+steps:
+  - name: 'gcr.io/kaniko-project/executor:latest'
+    args:
+      - --cache=true
+      - --destination=gcr.io/$PROJECT_ID/jconlive
+    timeout: 1200s
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'jconlive'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/jconlive:latest'
+      - '--region'
+      - 'europe-north1'
+      - '--allow-unauthenticated'
+timeout: 1200s
+options:
+  machineType: N1_HIGHCPU_32
