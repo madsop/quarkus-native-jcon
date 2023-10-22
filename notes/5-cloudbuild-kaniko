@@ -1,5 +1,5 @@
   - name: 'gcr.io/kaniko-project/executor:latest'
     args:
       - --cache=true
-      - --destination=gcr.io/$PROJECT_ID/jconlive
+      - --destination=gcr.io/$PROJECT_ID/tdc
     timeout: 1200s
