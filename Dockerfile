@@ -7,6 +7,8 @@ WORKDIR /code
 RUN ./mvnw -B org.apache.maven.plugins:maven-dependency-plugin:3.1.2:go-offline
 COPY src /code/src
 USER root
+RUN chown -R quarkus:quarkus /code
+USER quarkus
 RUN ./mvnw package -Dnative
 
 ## Stage 2 : create the docker final image
