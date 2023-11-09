@@ -1,5 +1,5 @@
 *
-src
-pom.xml
-.mvn
-mvnw
+!src
+!pom.xml
+!.mvn
+!mvnw
