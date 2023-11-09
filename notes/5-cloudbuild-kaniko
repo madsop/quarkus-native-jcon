@@ -1,5 +1,5 @@
   - name: 'gcr.io/kaniko-project/executor:latest'
     args:
       - --cache=true
-      - --destination=gcr.io/$PROJECT_ID/tdc
+      - --destination=gcr.io/$PROJECT_ID/oredev
     timeout: 1200s

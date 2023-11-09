@@ -3,9 +3,9 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'tdc'
+      - 'oredev'
       - '--image'
-      - 'gcr.io/$PROJECT_ID/tdc:latest'
+      - 'gcr.io/$PROJECT_ID/oredev:latest'
       - '--region'
       - 'europe-north1'
       - '--allow-unauthenticated'
